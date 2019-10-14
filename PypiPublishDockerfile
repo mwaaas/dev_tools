@@ -1,5 +1,6 @@
 FROM alpine:3.10.2
 
+# todo install bash and remove cache and artifacts
 RUN apk add bash
 
 COPY publish.sh .
