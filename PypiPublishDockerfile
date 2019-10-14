@@ -1,9 +1,13 @@
-FROM alpine:3.10.2
+FROM python:3.7.4-alpine3.10
 
 # todo install bash and remove cache and artifacts
-RUN apk add bash
+# todo check if the base image comes with bash
+RUN apk add bash git \
+    && pip install twine==1.15.0
 
 COPY publish.sh .
 
-ENTRYPOINT ./publish.sh
+WORKDIR /usr/src/app
+
+ENTRYPOINT ["/publish.sh"]
 
