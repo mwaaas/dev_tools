@@ -1,0 +1,8 @@
+FROM alpine:3.10.2
+
+RUN apk add bash
+
+COPY publish.sh .
+
+ENTRYPOINT ./publish.sh
+
