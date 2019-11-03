@@ -6,4 +6,4 @@ if [[ -z "${1}" ]] ; then
     exit 1
 fi
 
-./$1.sh ${@:2}
+/app_script//$1.sh ${@:2}

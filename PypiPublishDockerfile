@@ -10,5 +10,7 @@ WORKDIR /app_script
 
 COPY . .
 
-ENTRYPOINT ["./entrypoint.sh"]
+WORKDIR /usr/src/app
+
+ENTRYPOINT ["/app_script/entrypoint.sh"]
 
