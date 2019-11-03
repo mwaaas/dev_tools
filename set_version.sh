@@ -21,4 +21,4 @@ echo "version ${version}"
 echo "version file $version_file"
 
 echo "overriding version field"
-sed -i 's/VERSION = .*/VERSION = "'${version}'"/1' version.py
+sed -i 's/VERSION = .*/VERSION = "'${version}'"/1' $version_file
