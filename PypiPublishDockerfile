@@ -5,9 +5,10 @@ FROM python:3.7.4-alpine3.10
 RUN apk add bash git \
     && pip install twine==1.15.0
 
-COPY publish.sh .
 
-WORKDIR /usr/src/app
+WORKDIR /app_script
 
-ENTRYPOINT ["/publish.sh"]
+COPY . .
+
+ENTRYPOINT ["./entrypoint.sh"]
 

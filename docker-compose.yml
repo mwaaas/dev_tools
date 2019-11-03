@@ -1,0 +1,8 @@
+version: "3.4"
+services:
+  pypi_pub_tools:
+    build:
+      context: .
+      dockerfile: PypiPublishDockerfile
+    volumes:
+      - ./:/app_script
